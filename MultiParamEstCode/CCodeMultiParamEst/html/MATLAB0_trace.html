@@ -1,0 +1,135 @@
+<HTML><HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><TITLE>Traceability Report for MATLAB0</TITLE><LINK rel="stylesheet" type="text/css" href="rtwreport.css" /><STYLE type="text/css">TABLE { border-style: outset; border-width: 1px; width: 100% } P { margin-top: 0; margin-bottom: 0 } PRE { margin: 0 }</STYLE><SCRIPT type="text/javascript" language="JavaScript" src="slwebview.js"></SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript" src="id_mapping.js"></SCRIPT>
+
+<SCRIPT language="JavaScript" type="text/javascript"> 
+<!--
+function rtwTraceHilite(file,ext,ln) { 
+    function loc_hilite(file,ext,ln) { 
+        if (top.rtwMainReloadNoPanel) top.rtwMainReloadNoPanel(file+"."+ext+":"+ln); 
+        else window.location = file+"_"+ext+".html#"+ln; 
+    } 
+    var webviewFrame = top.document.getElementById('rtw_webviewMidFrame');
+    if (webviewFrame) {
+       loc_hilite(file,ext,ln);
+       return;
+    } else {
+        if (top && top.rtwreport_document_frame) 
+            top.rtwreport_document_frame.location.href = file+"_"+ext+".html#"+ln; 
+    } 
+}
+//-->
+</SCRIPT></HEAD><BODY ONLOAD="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdTraceability'); else local_onload();}} catch(err) {};"><DIV class="title" id="title"><H1>Traceability Report for MATLAB0</H1><DIV class="toc" id="toc"><H3>Table of Contents</H3><OL><LI><A href="#href_untraceable">Eliminated / Virtual Blocks</A></LI><LI><A href="#href_traceable">Traceable Simulink Blocks / Stateflow Objects / MATLAB Functions</A><UL class="toc_systems" id="toc_systems"><LI><A href="#href_sys1">MultiParamEst/MATLAB Function7</A></LI></UL></LI></OL></DIV></DIV><DIV class="contents" id="contents"><DIV class="section1" id="sec_eliminated_virtual"><H3><A id="href_untraceable">Eliminated / Virtual Blocks</A></H3><TABLE class="AltRow" cellspacing="0"><TR><TH>Block Name</TH><TH>Comment</TH></TR><TR class="even"><TD><a href="matlab:coder.internal.code2model('MultiParamEst:1:1')" name="code2model"><font color="#117755"><i>&lt;S1&gt;:1</i></font></a></TD><TD><P>EMChart eliminated by optimization</P></TD></TR></TABLE></DIV><DIV class="section1" id="sec_traceable"><H3><A id="href_traceable">Traceable Simulink Blocks / Stateflow Objects / MATLAB Functions</A></H3><DIV class="section2" id="sec_traceable_2"><H4>MATLAB Function: <A id="href_sys1"><a href="matlab:coder.internal.code2model('MultiParamEst:1')" name="code2model">MultiParamEst/MATLAB Function7</a></A></H4><TABLE class="eml"><TR><TH></TH><TH>Script</TH><TH>Code Location</TH></TR>
+<TR class="d0"><TD>1</TD><TD><PRE>function [RsOut,LdOut,LqOut,PsidmOut] <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>2</TD><TD><PRE>global INITV_RS INITV_NDD INITV_NDQ I <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>3</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>4</TD><TD><PRE>persistent hat_x hat_param P_hat_x P_ <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>5</TD><TD><PRE>persistent difx_difparam K_xk_1 difH_ <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>6</TD><TD><PRE>if isempty(hat_x)</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>7</TD><TD><PRE>    hat_x = single([0;0;]);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>8</TD><TD><PRE>    hat_param = single([INITV_RS;INIT <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>9</TD><TD><PRE>    P_hat_x = single(zeros(2));</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>10</TD><TD><PRE>    P_hat_param = single(zeros(5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>11</TD><TD><PRE>    </PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>12</TD><TD><PRE>    difx_difparam = single(zeros(2,5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>13</TD><TD><PRE>    K_xk_1 = single(zeros(2));</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>14</TD><TD><PRE>    difH_difparam = single(zeros(2,5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>15</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>16</TD><TD><PRE>u = [ugamma;udelta;];</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>17</TD><TD><PRE>i = [igamma;idelta;];</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>18</TD><TD><PRE>Tsim = single(1e-4);</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>19</TD><TD><PRE>Qx = single([DEKF_Qx,0;0,DEKF_Qx;]);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>20</TD><TD><PRE>Qp = single(diag([DEKF_QpRs DEKF_QpNd <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>21</TD><TD><PRE>R = single([DEKF_R,0;0,DEKF_R;]);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>22</TD><TD><PRE>J = single([0,-1;1,0]);</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>23</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>26</TD><TD><PRE>param_PE = hat_param;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>27</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>28</TD><TD><PRE>P_param_PE = P_hat_param + Qp;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>29</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>32</TD><TD><PRE>Rs = param_PE(1);</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>33</TD><TD><PRE>Ngg = param_PE(2); Ngd = param_PE(3); <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>34</TD><TD><PRE>Psidm = param_PE(5);</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>35</TD><TD><PRE>we = we0 + weh;</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>36</TD><TD><PRE>N = [Ngg Ngd;Ngd Ndd;];</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>37</TD><TD><PRE>A = (Rs * N + we * J);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>38</TD><TD><PRE>tilde_theta = 1/2 * atan(-2 * Ngd / ( <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>39</TD><TD><PRE>dot_x = u - A * hat_x - we * J * Psid <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>40</TD><TD><PRE>x_PE = hat_x + dot_x * Tsim;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>41</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>42</TD><TD><PRE>A_dis = eye(2) - A * Tsim;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>43</TD><TD><PRE>P_x_PE = A_dis * P_hat_x * A_dis' + Qx;</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>44</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>46</TD><TD><PRE>K_xk = P_x_PE * N' * (N * P_x_PE * N' <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>47</TD><TD><PRE>P_hat_x = (eye(2) - K_xk * N) * P_x_PE;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>48</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>50</TD><TD><PRE>difhat_x_difparam = difx_difparam - K <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>51</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>52</TD><TD><PRE>TempA = we * Psidm * 1/2 * 1/(1 + (-2 <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>53</TD><TD><PRE>TempCOS = TempA * cos(tilde_theta); T <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>54</TD><TD><PRE>C1 = TempCOS * single(-1);            <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>55</TD><TD><PRE>C3 = TempCOS * single(2) * (Ndd - Ngg <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>56</TD><TD><PRE>C5 = TempCOS * single( 1);            <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>57</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>58</TD><TD><PRE>difG_difparam     = -Tsim * [Ngg * ha <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>59</TD><TD><PRE>                             Ngd * ha <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>60</TD><TD><PRE>difG_difparam = difG_difparam + A_dis <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>61</TD><TD><PRE>H_pk = [0, hat_x(1), hat_x(2), 0      <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>62</TD><TD><PRE>        0, 0       , hat_x(1), hat_x( <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>63</TD><TD><PRE>H_pk = H_pk + N * difG_difparam;</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>64</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>65</TD><TD><PRE>K_pk = P_param_PE * H_pk' * (H_pk * P <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>66</TD><TD><PRE>P_hat_param = (eye(5) - K_pk * H_pk)  <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>68</TD><TD><PRE>hat_x = x_PE + K_xk * (i - N * x_PE);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>69</TD><TD><PRE>hat_param = param_PE + K_pk * (i - N  <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>70</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>71</TD><TD><PRE>if(hat_param(1) &gt; single(2.0))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>72</TD><TD><PRE>    hat_param(1) = single(2.0);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>73</TD><TD><PRE>elseif(hat_param(1) &lt; single(0.2))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>74</TD><TD><PRE>    hat_param(1) = single(0.2);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>75</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>76</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>77</TD><TD><PRE>if(hat_param(2) &gt; single(3.7e3))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>78</TD><TD><PRE>    hat_param(2) = single(3.7e3);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>79</TD><TD><PRE>elseif(hat_param(2) &lt; single(3.7e1))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>80</TD><TD><PRE>    hat_param(2) = single(3.7e1);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>81</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>82</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>84</TD><TD><PRE>if(hat_param(3) &gt; single(3.7e2))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>85</TD><TD><PRE>    hat_param(3) = single(3.7e2);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>86</TD><TD><PRE>elseif(hat_param(3) &lt; -single(3.7e2))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>87</TD><TD><PRE>    hat_param(3) = -single(3.7e2);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>88</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>89</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>91</TD><TD><PRE>if(hat_param(4) &gt; single(2.0e3))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>92</TD><TD><PRE>    hat_param(4) = single(2.0e3);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>93</TD><TD><PRE>elseif(hat_param(4) &lt; single(2.0e1))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>94</TD><TD><PRE>    hat_param(4) = single(2.0e1);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>95</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>96</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>97</TD><TD><PRE>if(hat_param(5) &gt; single(0.1))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>98</TD><TD><PRE>    hat_param(5) = single(0.1);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>99</TD><TD><PRE>elseif(hat_param(5) &lt; single(0.24))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>100</TD><TD><PRE>    hat_param(5) = single(0.24);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>101</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>102</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>104</TD><TD><PRE>difx_difparam = difG_difparam;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>105</TD><TD><PRE>K_xk_1 = K_xk;</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>106</TD><TD><PRE>difH_difparam = H_pk;</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>107</TD><TD><PRE></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>108</TD><TD><PRE>if(DEKF_CLEAR == uint16(1))</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>109</TD><TD><PRE>    hat_x = single([0;0;]);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>110</TD><TD><PRE>    hat_param = single([INITV_RS;INIT <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>111</TD><TD><PRE>    P_hat_x = single(zeros(2));</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>112</TD><TD><PRE>    P_hat_param = single(zeros(5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>113</TD><TD><PRE>    </PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>114</TD><TD><PRE>    difx_difparam = single(zeros(2,5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>115</TD><TD><PRE>    K_xk_1 = single(zeros(2));</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>116</TD><TD><PRE>    difH_difparam = single(zeros(2,5));</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>117</TD><TD><PRE>end</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>118</TD><TD><PRE>P =     [cos(tilde_theta) sin(tilde_t <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>119</TD><TD><PRE>P_inv = [cos(tilde_theta) -sin(tilde_ <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>120</TD><TD><PRE>NOut = [hat_param(2) hat_param(3);hat <FONT color="blue">...</FONT></PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>121</TD><TD><PRE>LOut = P_inv * (NOut^-1) * P;</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>122</TD><TD><PRE>RsOut = hat_param(1);</PRE></TD><TD></TD></TR>
+<TR class="d0"><TD>123</TD><TD><PRE>LdOut = LOut(1,1); LqOut = LOut(2,2);</PRE></TD><TD></TD></TR>
+<TR class="d1"><TD>124</TD><TD><PRE>PsidmOut = hat_param(5);</PRE></TD><TD></TD></TR></TABLE></DIV></DIV></DIV></BODY></HTML>

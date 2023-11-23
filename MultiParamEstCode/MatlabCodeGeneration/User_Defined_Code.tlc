@@ -1,0 +1,17 @@
+%implements User_Defined_Code "C"
+%function BlockTypeSetup(block,system) void
+%endfunction
+
+%function Start(block,system) Output
+%endfunction
+
+%function Outputs(block, system) Output
+  %openfile buffer
+    /*CCCCC */
+  /*  */
+  %closefile buffer
+%<buffer>
+%assign t_str = SFcnParamSettings.code_str
+%%assign t_str = LibBlockParameterAddr(P1, "", "", 0)
+%<t_str>
+%endfunction

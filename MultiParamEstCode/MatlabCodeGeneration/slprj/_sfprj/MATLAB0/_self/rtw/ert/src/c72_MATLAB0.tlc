@@ -1,0 +1,81 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   8 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "hat_x"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:246-251"\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "hat_x_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:246-251"\
+    }\
+    ChartData {\
+      Name         "hat_param"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:252-261"\
+      Dimensions   [5]\
+    }\
+    ChartData {\
+      Name         "P_hat_x"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:262-269"\
+      Dimensions   [2,2]\
+    }\
+    ChartData {\
+      Name         "P_hat_param"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:270-281"\
+      Dimensions   [5,5]\
+    }\
+    ChartData {\
+      Name         "difx_difparam"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:294-307"\
+      Dimensions   [2,5]\
+    }\
+    ChartData {\
+      Name         "K_xk_1"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:308-314"\
+      Dimensions   [2,2]\
+    }\
+    ChartData {\
+      Name         "difH_difparam"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "MATLAB0:1:315-328"\
+      Dimensions   [2,5]\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
