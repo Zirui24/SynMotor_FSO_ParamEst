@@ -8,9 +8,9 @@ Both MATLABSimulink(MATLAB 2019B) and python files on full state observer with p
 In this project:
 1.  The "Sim_ParamEst" file gives the simulation on python and matlab of the proposed position error mechanism and proposed multi-parameter estimator
 2.  The "Sim_FullStateOb" file gives the simulation on python and matlab of the full state EEMF observer for position observation. And it intergrates resistance and q-axis inductance estimation for isotropic motor, i.e. SPMSM
-3.  The "MultiParamEstCode" file gives the hole experiments code based on matlab code generation. The proposed algorithm can be find in "TEST_IPM_2_0/INT/Extra Observer". Also, for those familiar with C code, The observer C code generated separately by matlab can be found in "E:\HUST\code\matlab_code\embedder_coder\IPMSM\Sensorless_IPM_V2_0_TPE\Sim\ParamEST\SynMotor_FSO_ParamEst\MultiParamEstCode\CCodeMultiParamEst"
+3.  The "MultiParamEstCode" file gives the hole experiments code based on matlab code generation. The proposed algorithm can be find in "TEST_IPM_2_0/INT/Extra Observer". Also, for those familiar with C code, The observer C code generated separately by matlab can be found in "MultiParamEstCode\CCodeMultiParamEst"
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different initial values. 
-![image](Sim_ParamEst\matlab\SimResults.tif)
+![image](Sim_ParamEst\matlab\SimResults.png)
 Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different convergence parameters. 
-![image](Sim_ParamEst\matlab\SimResults2.tif)
+![image](Sim_ParamEst\matlab\SimResults2.png)
