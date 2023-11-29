@@ -11,6 +11,8 @@ In this project:
 3.  The "MultiParamEstCode" file gives the hole experiments code based on matlab code generation. The proposed algorithm can be find in "TEST_IPM_2_0/INT/Extra Observer". Also, for those familiar with C code, The observer C code generated separately by matlab can be found in "MultiParamEstCode\CCodeMultiParamEst"
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different initial values. 
-![image](https://github.com/Zirui24/SynMotor_FSO_ParamEst/blob/main/Sim_ParamEst/matlab/SimResults.png)
+![SimResults](https://github.com/Zirui24/SynMotor_FSO_ParamEst/assets/35267355/ce660f17-1847-437f-ac0d-ad4cf7e42d51)
+
+
 Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different convergence parameters. 
-![image](https://github.com/Zirui24/SynMotor_FSO_ParamEst/blob/main/Sim_ParamEst/matlab/SimResults2.png)
+![SimResults2](https://github.com/Zirui24/SynMotor_FSO_ParamEst/assets/35267355/fdfbb4c7-9532-41be-905c-6b20d2ad206f)
