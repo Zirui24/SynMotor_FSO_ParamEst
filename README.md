@@ -3,13 +3,16 @@ This repository contains simulations and code for model-based sensorless control
 
 ## Features
 Full State Observer and Parameter Estimation: Simulations of the full state Extended Electromotive Force (EEMF) observer for position observation, which includes resistance and q-axis inductance estimation for isotropic motors such as the Surface-Mounted Permanent Magnet Synchronous Motors (SPMSMs).
+
 Multi-Parameter Estimator: Code for extensive experiments and algorithm validation, written in MATLAB and translatable to C through MATLAB code generation.
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different initial values. 
+
 ![SimResults](./Sim_ParamEst/SimResults.png)
 
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different convergence parameters. 
+
 ![SimResults2](./Sim_ParamEst/SimResults2.png)
 
 
