@@ -8,12 +8,12 @@ Multi-Parameter Estimator: Code for extensive experiments and algorithm validati
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different initial values. 
 
-![SimResults](./Sim_ParamEst/SimResults.png)
+![SimResults](./Sim_ParamEst/Sim1.png)
 
 
 Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different convergence parameters. 
 
-![SimResults2](./Sim_ParamEst/SimResults2.png)
+![SimResults2](./Sim_ParamEst/Sim2.png)
 
 
 ## Contributing & Citing
