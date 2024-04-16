@@ -1,18 +1,39 @@
-# Synchronous Machine Model-based Sensorless Control with Full State Observer & Parameter Estimation
-This repository demonstrates the model-based synchronous machine sensorless control with parameter estimation.
+# Analytical Approach for Position Observation Error Correction in IPMSM Sensorless Drives Using Online Multi-Parameter Estimation
+This repository contains simulations and code for model-based sensorless control of synchronous machines, integrating a full state observer and parameter estimation. The implementation is provided for both MATLAB (2019B) and Python, showcasing the development and testing of sensorless drive mechanisms.
 
+## Features
+Full State Observer and Parameter Estimation: Simulations of the full state Extended Electromotive Force (EEMF) observer for position observation, which includes resistance and q-axis inductance estimation for isotropic motors such as the Surface-Mounted Permanent Magnet Synchronous Motors (SPMSMs).
+Multi-Parameter Estimator: Code for extensive experiments and algorithm validation, written in MATLAB and translatable to C through MATLAB code generation.
 
-
-Both MATLABSimulink(MATLAB 2019B) and python files on full state observer with parameter estimation are given in this project.
-
-In this project:
-1.  The "Sim_ParamEst" file gives the simulation on python and matlab of the proposed position error mechanism and proposed multi-parameter estimator
-2.  The "Sim_FullStateOb" file gives the simulation on python and matlab of the full state EEMF observer for position observation. And it intergrates resistance and q-axis inductance estimation for isotropic motor, i.e. SPMSM
-3.  The "MultiParamEstCode" file gives the hole experiments code based on matlab code generation. The proposed algorithm can be find in "TEST_IPM_2_0/INT/Extra Observer". Also, for those familiar with C code, The observer C code generated separately by matlab can be found in "MultiParamEstCode\CCodeMultiParamEst"
-
-Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different initial values. 
+Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different initial values. 
 ![SimResults](./Sim_ParamEst/SimResults.png)
 
 
-Matlab simulation results of proposed position correction & parameter estimation under sensorless dirve with different convergence parameters. 
+Matlab simulation results of proposed position correction & parameter estimation under sensorless drive with different convergence parameters. 
 ![SimResults2](./Sim_ParamEst/SimResults2.png)
+
+
+## Contributing & Citing
+
+Contributions to the project are welcome. Please ensure to follow the existing code structure and document any changes or additions clearly.
+
+The Analytical Approach for Position Observation Error Correction in IPMSM Sensorless Drives Using Online Multi-Parameter Estimation is first introducted at
+```
+@ARTICLE{XXXXXXX,
+  author={xxxx},
+  journal={xxxx}, 
+  title={Analytical Approach for Position Observation Error Correction in IPMSM Sensorless Drives Using Online Multi-Parameter Estimation}, 
+  year={xxx},
+  volume={xx},
+  number={xx},
+  pages={xxx},
+  }
+```
+
+## License
+
+[MIT License](LICENSE.md)
+
+## Contact
+
+For any queries or further discussion regarding the project, please open an issue in this repository or direct connect ziruiliu@hust.edu.cn.
