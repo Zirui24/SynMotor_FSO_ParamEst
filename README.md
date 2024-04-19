@@ -22,15 +22,16 @@ Contributions to the project are welcome. Please ensure to follow the existing c
 
 The Analytical Approach for Position Observation Error Correction in IPMSM Sensorless Drives Using Online Multi-Parameter Estimation is first introducted at
 ```
-@ARTICLE{XXXXXXX,
-  author={xxxx},
-  journal={xxxx}, 
+@ARTICLE{10505008,
+  author={Liu, Zirui and Shen, Bohan and Kong, Wubin and Fan, Xinggang and Peng, Kai and Qu, Ronghai},
+  journal={IEEE Transactions on Power Electronics}, 
   title={Analytical Approach for Position Observation Error Correction in IPMSM Sensorless Drives Using Online Multi-Parameter Estimation}, 
-  year={xxx},
-  volume={xx},
-  number={xx},
-  pages={xxx},
-  }
+  year={2024},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Resistance;Estimation;Inductance;Observers;Transient analysis;Mathematical models;Couplings;Position error mechanism;position error correction;parameter estimation;sensorless drive},
+  doi={10.1109/TPEL.2024.3390809}}
 ```
 
 ## License
